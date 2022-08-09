@@ -6,7 +6,7 @@ import '@openzeppelin/contracts/access/Ownable.sol';
 
 
 contract Proyecto is ERC721, Ownable {
-    uint256 public mintPrice= 0.01 ether; 
+    uint256 public mintPrice= 1 ether; 
     uint256 public totalSupply;
     uint public maxSupply;
     bool public isMintEnabled;
