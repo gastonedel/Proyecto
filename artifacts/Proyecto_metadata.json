@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.4+commit.c7e474f2"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -260,6 +260,44 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_posci",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_altura",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_peso",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_edad",
+						"type": "uint256"
+					}
+				],
+				"name": "nuevoElemento",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -555,7 +593,7 @@
 		"compilationTarget": {
 			"contract-0b625b6391.sol": "Proyecto"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -648,11 +686,11 @@
 			]
 		},
 		"contract-0b625b6391.sol": {
-			"keccak256": "0xa60912eee36986f4f2cf477414ca6d9c85b19635594b579826dd4771ad085b67",
+			"keccak256": "0xb0d137acb598bb79bdfac034ac5c788cfd6f42cd96f320772cc79a8fbeac4eb2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f38bd5318c6c24d769597ad1e1b81613ef371515a8efb829e070251e03efa0c7",
-				"dweb:/ipfs/QmV1rxsA3mRswnGv9N9Mc9zr4QmS6B8CQoWorgkEzPT1bv"
+				"bzz-raw://336c227cbe1274566f5ee5a6ba0c305e62a771645152af390d2ab2fa3b10afcd",
+				"dweb:/ipfs/QmRVJ4vwP1MBvLRRJViAP1bik9593KknUv9kTkxeXLMKNs"
 			]
 		}
 	},

@@ -26,7 +26,7 @@ contract Proyecto is ERC721, Ownable {
 
     function mint() external payable {
         require (isMintEnabled, 'minting not enabled');
-        // esta linea de abajo dice que cada walle solo puede mintear 1
+        // esta linea de abajo dice que cada wallet solo puede mintear 1
         require(mintedWallets [msg.sender] < 1, ' exceedes max per wallet');
         require(msg.value == mintPrice, 'wrong value');
         require(maxSupply > totalSupply, ' sold out');
@@ -39,6 +39,22 @@ contract Proyecto is ERC721, Ownable {
         _safeMint(msg.sender, tokenId);
     }
 
+        struct Figurita{
+            string nombre;
+            string posci;
+            uint id;
+            uint altura;
+            uint peso;
+            uint edad;
+        }
+
+        Figurita[] arrayFiguritas;
+
+        function nuevoElemento(string memory _nombre, string memory _posci, uint _id, uint _altura, uint _peso, uint _edad) public {
+            arrayFiguritas.push(Figurita( _nombre, _posci, _id, _altura, _peso, _edad));
+        
+        }
 
 
+        
 }
