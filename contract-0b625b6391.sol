@@ -26,9 +26,6 @@ contract Proyecto is ERC721, Ownable {
 
     function mint() external payable {
         require (isMintEnabled, 'minting not enabled');
-        // esta linea de abajo dice que cada wallet solo puede mintear 1
-        require(mintedWallets [msg.sender] < 1, ' exceedes max per wallet');
-        require(msg.value == mintPrice, 'wrong value');
         require(maxSupply > totalSupply, ' sold out');
 
         // esta linea sirve para saber cuantas veces fue minteado el nft
@@ -48,13 +45,26 @@ contract Proyecto is ERC721, Ownable {
             uint edad;
         }
 
-        Figurita[] arrayFiguritas;
+        Figurita figurita1= Figurita("Saad Al Sheeb", "Arquero", 1, 185, 79, 32);
+        Figurita figurita2= Figurita("Bassam Alrawi", "defensor",2,174, 77, 24);
+        Figurita figurita3= Figurita("Abdulkarim Hassan", "defensor", 3, 186, 79, 28);
+        Figurita figurita4= Figurita("Boualem Khoukhi", "mediocampista",4, 183, 76, 31);
 
-        function nuevoElemento(string memory _nombre, string memory _posci, uint _id, uint _altura, uint _peso, uint _edad) public {
-            arrayFiguritas.push(Figurita( _nombre, _posci, _id, _altura, _peso, _edad));
+
+        // se me ocurrio hacer un array que contenga las figuritas de cada usuario. Para eso tengo que crear
+        // arrays y mappearlos a las addresses de cada persona. Entonces cada vez que alguien consigue una 
+        //figurita, se suma a su array y cuando la tiene 2 veces, la puede vender. 
+
+        mapping(address => Figurita[]) arrayAlbum;
+
         
+        //arrayAlbum[0x5B38Da6a701c568545dCfcB03FcB875f56beddC4] = [figurita1, figurita2];
+
+        //arrayAlbum[0x5B38Da6a701c568545dCfcB03FcB875f56beddC4] = [figurita3, figurita2, figurita4];
+
+
         }
+        
 
 
         
-}
